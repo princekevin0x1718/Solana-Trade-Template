@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "name": "multi_withdraw",
+  "instructions": [
+    {
+      "name": "withdrawSol",
+      "accounts": [
+        { "name": "signer", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [{ "name": "amounts", "type": { "vec": "u64" } }]
+    },
+    {
+      "name": "withdrawToken",
+      "accounts": [
+        { "name": "senderToken", "isMut": true, "isSigner": false },
+        { "name": "signer", "isMut": true, "isSigner": true },
+        { "name": "tokenProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [{ "name": "amounts", "type": { "vec": "u64" } }]
+    }
+  ]
+}
